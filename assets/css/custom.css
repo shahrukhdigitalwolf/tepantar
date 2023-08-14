@@ -230,6 +230,16 @@ h1{
     border: 1px solid #ddd;
     border-radius: 20px;
 }
+.watch_video{
+    background-color: #F05A28;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 20px;
+    display: block;
+    margin: auto;
+    width: 150px;
+    text-align: center;
+}
 .footer{
     background: url(../img/bg/Footer.png);
     background-size: cover;
