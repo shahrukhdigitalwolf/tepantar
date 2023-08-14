@@ -7,9 +7,37 @@
     <title>Tepantar - Home</title>
     <script defer="" src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.green.min.css">
     <link rel="stylesheet" href="./assets/css/slick.css">
     <link rel="stylesheet" href="./assets/css/slick-theme.css">
     <link rel="stylesheet" href="./assets/css/custom.css">
+    <style>
+        .owl-nav{
+            margin-top: 10px;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 999;
+        }
+        .owl-prev span{
+            position: absolute;
+            left: -45px;
+        }
+        .owl-next span{
+            position: absolute;
+            right: -45px;
+        }
+        .owl-prev span,.owl-next span{
+            background: #F05A28;
+            color: #ffffff;
+            padding: 2px 15px 4px;
+            border-radius: 38px;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
     <section class="header">
@@ -94,82 +122,151 @@
                         </select>
                     </div>
                     <div id="tab01" class="tab-contents">
-                        <div class="row gy-3">
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act1.png" class="img-fluid m-auto" alt="">
+                        <p class="text-center">
+                            Tepantar will not let you be bored,read your favourite novel sitting under a shady tree or enjoy your choice of songs during a campfire or try a match of badminton with your bestie
+                        </p>
+                        <div class="owl-carousel owl-theme" data-owl-carousel='{
+                            "margin": 10, 
+                            "nav": true, 
+                            "dots":false, 
+                            "loop":true, 
+                            "responsive":{ "0" :{ "items": 1 },"600":{ "items": 4 },"1000":{ "items": 4 }}
+                        }'>
+                            <div class="items">
+                                <img src="./assets/img/activities/site-seeing/1.png" class="img-fluid m-auto" alt="">
                             </div>
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act2.png" class="img-fluid m-auto" alt="">
+                            <div class="items">
+                                <img src="./assets/img/activities/site-seeing/2.png" class="img-fluid m-auto" alt="">
                             </div>
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act3.png" class="img-fluid m-auto" alt="">
+                            <div class="items">
+                                <img src="./assets/img/activities/site-seeing/3.png" class="img-fluid m-auto" alt="">
                             </div>
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act4.png" class="img-fluid m-auto" alt="">
+                            <div class="items">
+                                <img src="./assets/img/activities/site-seeing/4.png" class="img-fluid m-auto" alt="">
+                            </div>
+                            <div class="items">
+                                <img src="./assets/img/activities/site-seeing/5.png" class="img-fluid m-auto" alt="">
+                            </div>
+                            <div class="items">
+                                <img src="./assets/img/activities/site-seeing/6.png" class="img-fluid m-auto" alt="">
                             </div>
                         </div>
                     </div>
                     <div id="tab02" class="tab-contents">
-                        <div class="row gy-3">
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act4.png" class="img-fluid m-auto" alt="">
+                        <p class="text-center">
+                            Tepantar will not let you be bored,read your favourite novel sitting under a shady tree or enjoy your choice of songs during a campfire or try a match of badminton with your bestie
+                        </p>
+                        <div class="owl-carousel owl-theme" data-owl-carousel='{
+                            "margin": 10, 
+                            "nav": true, 
+                            "dots":false, 
+                            "loop":true, 
+                            "responsive":{ "0" :{ "items": 1 },"600":{ "items": 4 },"1000":{ "items": 4 }}
+                        }'>
+                            <div class="items">
+                                <img src="./assets/img/activities/leisure/1.png" class="img-fluid m-auto" alt="">
                             </div>
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act1.png" class="img-fluid m-auto" alt="">
+                            <div class="items">
+                                <img src="./assets/img/activities/leisure/2.png" class="img-fluid m-auto" alt="">
                             </div>
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act2.png" class="img-fluid m-auto" alt="">
+                            <div class="items">
+                                <img src="./assets/img/activities/leisure/3.png" class="img-fluid m-auto" alt="">
                             </div>
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act3.png" class="img-fluid m-auto" alt="">
+                            <div class="items">
+                                <img src="./assets/img/activities/leisure/4.png" class="img-fluid m-auto" alt="">
                             </div>
                         </div>
                     </div>
                     <div id="tab03" class="tab-contents">
-                        <div class="row gy-3">
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act1.png" class="img-fluid m-auto" alt="">
+                        <p class="text-center">
+                            Tepantar will not let you be bored,read your favourite novel sitting under a shady tree or enjoy your choice of songs during a campfire or try a match of badminton with your bestie
+                        </p>
+                        <div class="owl-carousel owl-theme" data-owl-carousel='{
+                            "margin": 10, 
+                            "nav": true, 
+                            "dots":false, 
+                            "loop":true, 
+                            "responsive":{ "0" :{ "items": 1 },"600":{ "items": 4 },"1000":{ "items": 4 }}
+                        }'>
+                            <div class="items">
+                                <img src="./assets/img/activities/cultural/1.png" class="img-fluid m-auto" alt="">
                             </div>
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act2.png" class="img-fluid m-auto" alt="">
+                            <div class="items">
+                                <img src="./assets/img/activities/cultural/2.png" class="img-fluid m-auto" alt="">
                             </div>
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act4.png" class="img-fluid m-auto" alt="">
+                            <div class="items">
+                                <img src="./assets/img/activities/cultural/3.png" class="img-fluid m-auto" alt="">
                             </div>
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act3.png" class="img-fluid m-auto" alt="">
+                            <div class="items">
+                                <img src="./assets/img/activities/cultural/4.png" class="img-fluid m-auto" alt="">
+                            </div>
+                            <div class="items">
+                                <img src="./assets/img/activities/cultural/5.png" class="img-fluid m-auto" alt="">
+                            </div>
+                            <div class="items">
+                                <img src="./assets/img/activities/cultural/6.png" class="img-fluid m-auto" alt="">
                             </div>
                         </div>
                     </div>
                     <div id="tab04" class="tab-contents">
-                        <div class="row gy-3">
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act1.png" class="img-fluid m-auto" alt="">
+                        <p class="text-center">
+                            Tepantar will not let you be bored,read your favourite novel sitting under a shady tree or enjoy your choice of songs during a campfire or try a match of badminton with your bestie
+                        </p>
+                        <div class="owl-carousel owl-theme" data-owl-carousel='{
+                            "margin": 10, 
+                            "nav": true, 
+                            "dots":false, 
+                            "loop":true, 
+                            "responsive":{ "0" :{ "items": 1 },"600":{ "items": 4 },"1000":{ "items": 4 }}
+                        }'>
+                            <div class="items">
+                                <img src="./assets/img/activities/seasonal-celebration/1.png" class="img-fluid m-auto" alt="">
                             </div>
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act3.png" class="img-fluid m-auto" alt="">
+                            <div class="items">
+                                <img src="./assets/img/activities/seasonal-celebration/2.png" class="img-fluid m-auto" alt="">
                             </div>
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act2.png" class="img-fluid m-auto" alt="">
+                            <div class="items">
+                                <img src="./assets/img/activities/seasonal-celebration/3.png" class="img-fluid m-auto" alt="">
                             </div>
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act4.png" class="img-fluid m-auto" alt="">
+                            <div class="items">
+                                <img src="./assets/img/activities/seasonal-celebration/4.png" class="img-fluid m-auto" alt="">
+                            </div>
+                            <div class="items">
+                                <img src="./assets/img/activities/seasonal-celebration/5.png" class="img-fluid m-auto" alt="">
+                            </div>
+                            <div class="items">
+                                <img src="./assets/img/activities/seasonal-celebration/6.png" class="img-fluid m-auto" alt="">
                             </div>
                         </div>
                     </div>
                     <div id="tab05" class="tab-contents">
-                        <div class="row gy-3">
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act2.png" class="img-fluid m-auto" alt="">
+                        <p class="text-center">
+                            Tepantar will not let you be bored,read your favourite novel sitting under a shady tree or enjoy your choice of songs during a campfire or try a match of badminton with your bestie
+                        </p>
+                        <div class="owl-carousel owl-theme" data-owl-carousel='{
+                            "margin": 10, 
+                            "nav": true, 
+                            "dots":false, 
+                            "loop":true, 
+                            "responsive":{ "0" :{ "items": 1 },"600":{ "items": 4 },"1000":{ "items": 4 }}
+                        }'>
+                            <div class="items">
+                                <img src="./assets/img/activities/rustic-village-experience/1.png" class="img-fluid m-auto" alt="">
                             </div>
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act1.png" class="img-fluid m-auto" alt="">
+                            <div class="items">
+                                <img src="./assets/img/activities/rustic-village-experience/2.png" class="img-fluid m-auto" alt="">
                             </div>
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act4.png" class="img-fluid m-auto" alt="">
+                            <div class="items">
+                                <img src="./assets/img/activities/rustic-village-experience/3.png" class="img-fluid m-auto" alt="">
                             </div>
-                            <div class="col-lg-3">
-                                <img src="./assets/img/photos/act3.png" class="img-fluid m-auto" alt="">
+                            <div class="items">
+                                <img src="./assets/img/activities/rustic-village-experience/4.png" class="img-fluid m-auto" alt="">
+                            </div>
+                            <div class="items">
+                                <img src="./assets/img/activities/rustic-village-experience/5.png" class="img-fluid m-auto" alt="">
+                            </div>
+                            <div class="items">
+                                <img src="./assets/img/activities/rustic-village-experience/6.png" class="img-fluid m-auto" alt="">
                             </div>
                         </div>
                     </div>
@@ -248,9 +345,9 @@
                         </div>
                     </div>
                     <div class="p-2">
-                        <img src="./assets/img/photos/char_chala.png" class="img-fluid rounded-top" alt="">
+                        <img src="./assets/img/photos/dinning_area.png" class="img-fluid rounded-top" alt="">
                         <div class="card_body body_clr5">
-                            <h3>Gol Ghar</h3>
+                            <h3>Dinning Area</h3>
                             <a href="#">Read More</a>
                         </div>
                     </div>
@@ -267,7 +364,7 @@
                 <p class="text-center">Why not ride away to the lap of nature with your office mates and spend a worthy corporate staycation</p>
             </div>
             <div class="cg_togather">
-                <div class="row">
+                <div class="row gy-3">
                     <div class="col-lg-4">
                         <img src="./assets/img/photos/c1.png" class="img-fluid m-auto" alt="">
                     </div>
@@ -276,6 +373,15 @@
                     </div>
                     <div class="col-lg-4">
                         <img src="./assets/img/photos/c3.png" class="img-fluid m-auto" alt="">
+                    </div>
+                    <div class="col-lg-4">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/1dBxk79CDmk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-lg-4">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/WSPHEV0PY5w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-lg-4">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/iAnuyAZayb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -371,13 +477,22 @@
     
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
     <script src="./assets/js/slick.min.js"></script>
     <script src="./assets/js/custom.js"></script>
+    <script>
+        var $carousel = $('[data-owl-carousel]');
+        if ($carousel.length) {
+            $carousel.each(function (index, el) {
+                $(this).owlCarousel($(this).data('owl-carousel'));
+            });
+        }
+    </script>
     <script>
         $(document).ready(function(){
             $('.testimonial').slick({
                 slidesToShow: 4,
-                slidesToScroll: 1,
+                slidesToScroll: 4,
                 dots:true,
                 arrows:true,
                 responsive: [
@@ -396,7 +511,7 @@
         $(document).ready(function(){
             $('.rooms').slick({
                 slidesToShow: 4,
-                slidesToScroll: 1,
+                slidesToScroll: 3,
                 dots:true,
                 arrows:true,
                 responsive: [

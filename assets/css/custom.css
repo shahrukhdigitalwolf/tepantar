@@ -77,7 +77,21 @@ h1{
     } 
 }
 .tepantar-activities{
-    padding: 0px 0 30px;
+    position: relative;
+}
+.tab{
+    position: relative;
+    z-index: 10;
+}
+.tabs::after{
+    content: '';
+    background-color: #FFBAA3;
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 20px;
+    z-index: -1;
 }
 #tab-button {
     display: table;
