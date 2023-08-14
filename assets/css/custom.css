@@ -223,6 +223,13 @@ h1{
     left: 0;
     z-index: -1;
 }
+.download_leaflet{
+    background-color: transparent;
+    color: #ffffff;
+    padding: 10px 25px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
 .footer{
     background: url(../img/bg/Footer.png);
     background-size: cover;
