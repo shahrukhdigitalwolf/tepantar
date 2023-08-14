@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Shojumaru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+p,ul,li,a{
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    font-size: 33px;
+    font-family: 'Great Vibes', cursive;
+}
+@media (max-width:767px){
+    h1{
+        font-size: 25px;
+    }
+}
+
+/*------------------ header -------------- */
+.header{
+   position: relative;
+   position: sticky;
+   background-color: rgb(255, 255, 255);
+   top: 0;
+   border-bottom: 1px solid #d9a404;
+   z-index: 1020;
+}
+.header::before{
+    content: "";
+    background: url(../img/bg/header.png);
+    background-size: cover;
+    background-position: left;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .2;
+}
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link{
+    color: #F05A28;
+    border-bottom: 2px solid #F05A28;
+}
+.hero-sec{
+    position: relative;
+}
+.logo{
+    width: 100px;
+}
+.wee-des{
+    padding: 30px 0 30px;
+}
+.wee-des-img{
+    position: relative;
+}
+.wee-des-img::after{
+    content: "";
+    background: url(../img/bg/Rectangle.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 15px;
+    left: 65px;
+    z-index: -1;
+}
+@media (max-width:767px){
+    .wee-des-img::after{
+        display: none;
+    } 
+}
+.tepantar-activities{
+    padding: 0px 0 30px;
+}
+#tab-button {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  #tab-button li {
+    display: table-cell;
+    width: 100%;
+  }
+  #tab-button li a {
+    display: block;
+    padding: 10px;
+    background: #F05A28;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+  }
+  #tab-button li:not(:first-child) a {
+    border-left: none;
+  }
+  #tab-button li a:hover,
+  #tab-button .is-active a {
+    border: 1px solid #d74d4d;
+    background: #fff;
+    color:#000;
+    transition: all .5s ease;
+  }
+  .tab-contents {
+    padding: .5em 2em 1em;
+    
+  }
+.testimonial-home{
+    padding: 30px 0 30px;
+}
+.slick-prev:before, .slick-next:before{
+    color: #F05A28;
+}
+.slick-prev{
+    left: -6px;
+    z-index: 10;
+}
+.slick-next{
+    right: -6px;
+}
+.slick-slide img{
+    margin: auto;
+}
+.rooms-and-accomodation{
+    background-color: #fde2d992;
+    padding: 30px 0 30px;
+}
+.card_body{
+    padding: 10px 10px 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+    box-shadow: -1px 5px 4px #9b9b9b;
+}
+.body_clr1{
+    background-color: #FDE2D9;
+}
+.body_clr2{
+    background-color: #FFEDC1;
+}
+.body_clr3{
+    background-color: #FDE2D9;
+}
+.body_clr4{
+    background-color: #FFEDC1;
+}
+.body_clr5{
+    background-color: #FDE2D9;
+}
+.card_body h3{
+    font-family: 'Great Vibes', cursive;
+}
+.card_body a{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #F05A28;
+    padding: 3px 10px;
+    transition: all .5s ease;
+}
+.card_body a:hover{
+    background-color: #d74d4d;
+}
+.corporate_get_togethers{
+    padding: 30px 0 30px;
+}
+.cg_togather{
+    background-color: #F05A28;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+}
+.cg_togather::before{
+    content: '';
+    background: url(../img/bg/dgi1.png);
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.a_ladies_trip{
+    padding: 30px 0 30px;
+    background-color: #FFF7E3;
+    position: relative;
+    z-index: 10;
+}
+.a_ladies_trip::before{
+    content: '';
+    background: url(../img/bg/dgi1.png);
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.footer{
+    background: url(../img/bg/Footer.png);
+    background-size: cover;
+    background-position: center center;
+    padding: 30px 10px 80px;
+}
+.footer h4{
+    font-family: 'Great Vibes', cursive;
+}
+.footer p{
+    font-size: 14px;
+}
+.footer ul li{
+    font-size: 14px;
+    list-style: none;
+    margin-bottom: 6px;
+}
