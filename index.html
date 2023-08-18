@@ -28,12 +28,12 @@
 
         .owl-prev span {
             position: absolute;
-            left: -45px;
+            left: -40px;
         }
 
         .owl-next span {
             position: absolute;
-            right: -45px;
+            right: -40px;
         }
 
         .owl-prev span,
@@ -55,10 +55,20 @@
                     <a class="navbar-brand" href="index.html">
                         <img src="./assets/img/logo/logo.png" class="img-fluid logo" alt="Brand-Logo">
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="plates">
+                            <div class="plate plate1" onclick="this.classList.toggle('active')">
+                              <svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                                <path class="line line1" d="M 30,65 H 70"/>
+                                <path class="line line2" d="M 70,50 H 30 C 30,50 18.644068,50.320751 18.644068,36.016949 C 18.644068,21.712696 24.988973,6.5812347 38.79661,11.016949 C 52.604247,15.452663 46.423729,62.711864 46.423729,62.711864 L 50.423729,49.152542 L 50.423729,16.101695"/>
+                                <path class="line line3" d="M 30,35 H 70 C 70,35 80.084746,36.737688 80.084746,25.423729 C 80.084746,19.599612 75.882239,9.3123528 64.711864,13.559322 C 53.541489,17.806291 54.423729,62.711864 54.423729,62.711864 L 50.423729,49.152542 V 16.101695"/>
+                              </svg>
+                              <svg class="x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                                <path class="line" d="M 34,32 L 66,68" />
+                                <path class="line" d="M 66,32 L 34,68" />
+                              </svg>
+                            </div>
+                      </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
@@ -504,7 +514,7 @@
     </section>
     <section class="footer">
         <div class="container">
-            <div class="row">
+            <div class="row gy-3">
                 <div class="col-lg-3">
                     <div>
                         <h4>Tepantar Eco Theatre</h4>
@@ -518,7 +528,7 @@
                 <div class="col-lg-3">
                     <div>
                         <h4>Booking Hours</h4>
-                        <ul>
+                        <ul style="padding-left: 0;">
                             <li>Mon : 8:30AM - 9:30PM</li>
                             <li>Tue : 8:30AM - 9:30PM</li>
                             <li>Wed : 8:30AM - 9:30PM</li>
@@ -533,10 +543,7 @@
                     <div>
                         <h4>Location</h4>
                         <div>
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.868487644855!2d88.45904217606265!3d22.58402153255004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02753e689d99df%3A0xae36d66c76fdc46d!2sTepantar%20Co-operative%20Housing%20Society%20Ltd..!5e0!3m2!1sen!2sin!4v1691761416663!5m2!1sen!2sin"
-                                width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d58500.61159391907!2d87.49945000000001!3d23.593994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f9dcaa57c87175%3A0x80e5a16908c8137!2sTepantar%20theatre%20village!5e0!3m2!1sen!2sus!4v1692358673667!5m2!1sen!2sus" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -602,12 +609,19 @@
                 arrows: true,
                 responsive: [
                     {
+                        breakpoint: 1199,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
                         breakpoint: 480,
                         settings: {
                             slidesToShow: 1,
                             slidesToScroll: 1
                         }
-                    }
+                    },
                 ]
             });
         });
