@@ -40,14 +40,109 @@
         .owl-next span {
             background: #F05A28;
             color: #ffffff;
-            padding: 2px 15px 4px;
+            padding: 0px 10px 1px;
             border-radius: 38px;
-            font-size: 20px;
+            font-size: 17px;
         }
+
+        /*Popup Css*/
+    .video-popup {
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+        position: fixed;
+        z-index: 999999;
+        display: none;
+    }
+    .video-popup.show{
+      display: block;
+    }
+    .iframe-wrapper {
+        width: 50%;
+        height: 70%;
+        position: absolute;
+        margin: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .video-popup #iframeHolder {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: #fff;
+    }
+    .video-popup iframe {
+        width: 100%;
+        height: 100%;
+    }
+    .close-video {
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        display: block;
+        border-radius: 100%;
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        cursor: pointer;
+        z-index: 99;
+        box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+    }
+    .video-close-icon {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .video-close-icon::before {
+        width: 60%;
+        height: 2px;
+        background: #000;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        transform: rotate(45deg);
+    }
+    
+    .video-close-icon::after {
+        width: 60%;
+        height: 2px;
+        background: #000;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        transform: rotate(-45deg);
+    }
+    
+    @media all and (max-width: 768px){
+      .iframe-wrapper {
+        width: 80%;
+        height: 25%;
+      }
+    }
     </style>
 </head>
 
 <body>
+    
+     <!--Video Popup-->
+     <span class="video-popup">
+        <span class="iframe-wrapper">
+            <span id="iframeHolder"></span>
+            <span class="close-video">
+                <span class="video-close-icon"></span>
+            </span>
+        </span>
+    </span>
     <section class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -181,8 +276,7 @@
                     </div>
                     <div id="tab02" class="tab-contents tab-bg">
                         <p class="text-center">
-                            Tepantar will not let you be bored,read your favourite novel sitting under a shady tree or
-                            enjoy your choice of songs during a campfire or try a match of badminton with your bestie.
+                            In and around Tepantar as a tourist you can visit various heritage and culturally rich sites which will give you an insight to rural India
                         </p>
                         <div class="owl-carousel owl-theme" data-owl-carousel='{
                             "margin": 10, 
@@ -326,39 +420,83 @@
                 <h1 class="text-center pb-2">Testimonials</h1>
                 <div class="testimonial">
                     <div class="p-2">
-                        <img src="./assets/img/testimonials/t1.png" class="img-fluid rounded" alt="">
+                        <img src="./assets/img/testimonials/satrupa.jpg" class="img-fluid rounded" alt="">
                         <div class="mt-2">
-                            <a class="watch_video" href="#">Watch Video</a>
-                        </div>
-
-                    </div>
-                    <div class="p-2">
-                        <img src="./assets/img/testimonials/t2.png" class="img-fluid rounded" alt="">
-                        <div class="mt-2">
-                            <a class="watch_video" href="#">Watch Video</a>
+                            <!-- <button class="video-btn" link="">
+                                Watch Video
+                            </button> -->
                         </div>
                     </div>
                     <div class="p-2">
-                        <img src="./assets/img/testimonials/t3.png" class="img-fluid rounded" alt="">
+                        <img src="./assets/img/testimonials/chitralekha.jpg" class="img-fluid rounded" alt="">
                         <div class="mt-2">
-                            <a class="watch_video" href="#">Watch Video</a>
+                            <!-- <button class="video-btn" link="https://www.youtube.com/embed/iAnuyAZayb8">
+                                Watch Video
+                            </button> -->
                         </div>
                     </div>
                     <div class="p-2">
-                        <img src="./assets/img/testimonials/t4.png" class="img-fluid rounded" alt="">
+                        <img src="./assets/img/testimonials/old_couple.jpeg" class="img-fluid rounded" alt="">
                         <div class="mt-2">
-                            <a class="watch_video" href="#">Watch Video</a>
+                            <!-- <button class="video-btn" link="https://www.youtube.com/embed/EngW7tLk6R8">
+                                Watch Video
+                            </button> -->
                         </div>
                     </div>
                     <div class="p-2">
-                        <img src="./assets/img/testimonials/t4.png" class="img-fluid rounded" alt="">
+                        <img src="./assets/img/testimonials/sangita.jpg" class="img-fluid rounded" alt="">
                         <div class="mt-2">
-                            <a class="watch_video" href="#">Watch Video</a>
+                           <!--  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Launch demo modal
+                            </button> -->
+                        </div>
+                        
+                    </div>
+                    <div class="p-2">
+                        <img src="./assets/img/testimonials/kids.jpg" class="img-fluid rounded" alt="">
+                        <div class="mt-2">
+                            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                Launch demo modal
+                            </button> -->
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <img src="./assets/img/testimonials/pradeep_wife.jpeg" class="img-fluid rounded" alt="">
+                        <div class="mt-2">
+                            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                Launch demo modal
+                            </button> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <video src="./assets/img/banner/banner.mp4" controls muted autoplay loop width="100%" height="100%"></video>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Tepanter</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <video src="./assets/videos/Chitra_Mam.mp4" controls muted autoplay loop width="100%" height="100%"></video>
+                </div>
+              </div>
+            </div>
+          </div>
     </section>
 
     <section class="rooms-and-accomodation">
@@ -490,18 +628,24 @@
     <section class="pt-3 pb-3">
         <div class="container">
             <h1 class="text-center">Our packages</h1>
-            <div class="row gy-3">
-                <div class="col-lg-3 col-md-3">
-                    <img src="./assets/img/photo2/our_pack2.png" class="img-fluid rounded" alt="">
-                </div>
-                <div class="col-lg-3 col-md-3">
+            <div class="owl-carousel owl-theme" data-owl-carousel='{
+                "margin": 10, 
+                "nav": true, 
+                "dots":false, 
+                "loop":true, 
+                "responsive":{ "0" :{ "items": 1, "nav":false, "dots":true },"600":{ "items": 4 },"1000":{ "items": 4 }}
+            }'>
+                <div class="item">
                     <img src="./assets/img/photo2/our_pack1.png" class="img-fluid rounded" alt="">
                 </div>
-                <div class="col-lg-3 col-md-3">
+                <div class="item">
                     <img src="./assets/img/photo2/our_pack2.png" class="img-fluid rounded" alt="">
                 </div>
-                <div class="col-lg-3 col-md-3">
-                    <img src="./assets/img/photo2/our_pack1.png" class="img-fluid rounded" alt="">
+                <div class="item">
+                    <img src="./assets/img/photo2/our_pack3.png" class="img-fluid rounded" alt="">
+                </div>
+                <div class="item">
+                    <img src="./assets/img/photo2/our_pack4.png" class="img-fluid rounded" alt="">
                 </div>
             </div>
         </div>

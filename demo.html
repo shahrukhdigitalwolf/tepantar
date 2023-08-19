@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <style>
+       
+    
+    /*Popup Css*/
+    .video-popup {
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+        position: fixed;
+        z-index: 999999;
+        display: none;
+    }
+    .video-popup.show{
+      display: block;
+    }
+    .iframe-wrapper {
+        width: 50%;
+        height: 70%;
+        position: absolute;
+        margin: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .video-popup #iframeHolder {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: #fff;
+    }
+    .video-popup iframe {
+        width: 100%;
+        height: 100%;
+    }
+    .close-video {
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        display: block;
+        border-radius: 100%;
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        cursor: pointer;
+        z-index: 99;
+        box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+    }
+    .video-close-icon {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .video-close-icon::before {
+        width: 60%;
+        height: 2px;
+        background: #000;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        transform: rotate(45deg);
+    }
+    
+    .video-close-icon::after {
+        width: 60%;
+        height: 2px;
+        background: #000;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        transform: rotate(-45deg);
+    }
+    
+    @media all and (max-width: 768px){
+      .iframe-wrapper {
+        width: 80%;
+        height: 62%;
+      }
+    }
+    </style>
+</head>
+
+<body>
+    <!--Video Popup-->
+    <span class="video-popup">
+        <span class="iframe-wrapper">
+            <span id="iframeHolder"></span>
+            <span class="close-video">
+                <span class="video-close-icon"></span>
+            </span>
+        </span>
+    </span>
+
+
+<div class="button-area">
+  <button class="video-btn" link="https://www.youtube.com/embed/EngW7tLk6R8">
+  Video One
+</button>
+  <button class="video-btn" link="https://www.youtube.com/embed/4D6obXrxQvk">
+  Video Two
+</button>
+</div>
+
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+         $('.video-btn').click(function(){
+        $('.video-popup').fadeIn();
+        $('#iframeHolder').html('');
+        var link = $(this).attr("link");
+        $('#iframeHolder').html('<iframe src="'+link+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+    });
+$('.close-video').click(function(){
+        $('.video-popup').fadeOut();
+        $('#iframeHolder').html('');
+    });
+    </script>
+</body>
+</html>
